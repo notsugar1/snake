@@ -91,7 +91,7 @@ LEFT = (-1, 0)
 RIGHT = (1, 0)
 
 def main():
-    pygame.inite()
+    pygame.init()
 
     clock = pygame.time.Clock()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
@@ -100,8 +100,10 @@ def main():
     surface = surface.convert()
     drawGrid(surface)
 
-    snake = snake()
-    food = food()
+    snake = Snake()
+    food = Food()
+
+    myfont = pygame.font.SysFont("monospase", 16)
 
     score = 0
     while(True):

@@ -82,7 +82,7 @@ def drawGrid(surface):
 SCREEN_WIDTH = 480 
 SCREEN_HEIGHT = 480 
 
-GRIDSIZE = 20
+GRIDSIZE = 40
 GRID_WIDTH = int(SCREEN_HEIGHT / GRIDSIZE)
 GRID_HEIGIT = int(SCREEN_WIDTH / GRIDSIZE)
 
@@ -120,7 +120,7 @@ def main():
         food.draw(surface)
         screen.blit(surface, (0, 0))
         text = myfont.render("Score {0}".format(score), 1, (0, 0, 0))
-        screen.blit(surface, (5, 10))
+        screen.blit(text, (5, 10))
         pygame.display.update()
 
 main()
